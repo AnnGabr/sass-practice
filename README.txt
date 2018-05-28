@@ -1,2 +1,2 @@
-SASS
+# SASS
 Practicing sass styling.
