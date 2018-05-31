@@ -1,39 +1,168 @@
-@import 'colors.scss';
+@import "colors.scss";
 
-.additional-info { 
+.additional-info {
     width: 100%;
 
-    .flex--row {
+    .is-block {
+        display: block;
+    }
+
+    .is-fullwidth {
+        width: 100%;
+    }
+
+    .flex {
         display: flex;
-        flex-direction: row;
+    }
+
+    .flex--column {
+        flex-direction: column;
     }
 
     .flex--auto {
         flex: auto;
     }
 
+    .with-standard-paddings {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .with-standard-margins {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .input {
+        box-sizing: border-box;
+
+        border: 1px solid $accent-2;
+
+        @extend .is-block;
+        @extend .is-fullwidth;
+    }
+
+    .header {
+        text-transform: capitalize;
+
+        color: $accent-2;
+        border-bottom: 1px solid $accent-2;
+    }
+
+    .title {
+        text-transform: capitalize;
+
+        color: $title;
+    }
+
+    .label {
+        margin-bottom: 0.57143em;
+
+        @extend .is-block;
+    }
+
+    .note {
+        @extend .is-block;
+    }
+
+    .btn {
+        height: 2.14286em;
+        padding: 0 40px;
+
+        cursor: pointer;
+        text-align: center;
+
+        border: 0;
+        border-radius: 2px;
+        outline: 0;
+
+        font-size: 14px;
+        line-height: 2.14286em;
+    }
+
+    .btn--cancel {
+        color: $accent;
+        background-color: $white;
+
+        &:hover {
+            color: $hover-accent;
+        }
+    }
+
+    .btn--submit {
+        text-transform: capitalize;
+
+        color: $white;
+        background-color: $accent;
+
+        &:hover {
+            background-color: $hover-accent;
+        }
+    }
+
     .confirm-field {
-        @extend .flex--row;
-        justify-content: flex-end;
+        @extend .flex;
+        @extend .with-standard-paddings;
         flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    &__header {
+        @extend .header;
+        @extend .with-standard-margins;
     }
 
     &-form {
-        &__storage, &__inspection  {
-            @extend .flex--row;
+        &__title {
+            @extend .title;
+            @extend .with-standard-margins;
         }
 
+        &__storage,
         &__inspection {
-            .inspection-comments, 
-            .inspection-info {
-                @extend .flex--auto;
+            @extend .flex;
+        }
+
+        .inspection-comments,
+        .inspection-info,
+        .storage-comments,
+        .storage-info {
+            box-sizing: border-box;
+            width: 50%;
+            margin-bottom: 1.375em;
+
+            @extend .with-standard-paddings;
+
+            &__input {
+                @extend .input;
+            }
+
+            &__label {
+                @extend .label;
+            }
+
+            &__note {
+                @extend .note;
             }
         }
 
-        &__storage {
-            .storage-comments, 
-            .storage-info {
-                @extend .flex--auto;
+        .inspection-info,
+        .storage-info {
+            &__input {
+                height: 30px;
+
+                line-height: 1.5;
+            }
+        }
+
+        .inspection-comments,
+        .storage-comments {
+            &__input {
+                height: 140px;
+
+                resize: none;
+
+                line-height: 1.5;
             }
         }
     }
