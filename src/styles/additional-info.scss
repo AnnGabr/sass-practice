@@ -1,0 +1,40 @@
+@import 'colors.scss';
+
+.additional-info { 
+    width: 100%;
+
+    .flex--row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .flex--auto {
+        flex: auto;
+    }
+
+    .confirm-field {
+        @extend .flex--row;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+    }
+
+    &-form {
+        &__storage, &__inspection  {
+            @extend .flex--row;
+        }
+
+        &__inspection {
+            .inspection-comments, 
+            .inspection-info {
+                @extend .flex--auto;
+            }
+        }
+
+        &__storage {
+            .storage-comments, 
+            .storage-info {
+                @extend .flex--auto;
+            }
+        }
+    }
+}
