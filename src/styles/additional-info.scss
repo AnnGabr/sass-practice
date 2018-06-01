@@ -2,6 +2,7 @@
 
 .additional-info {
     width: 100%;
+    margin: auto;
 
     .is-block {
         display: block;
@@ -13,10 +14,6 @@
 
     .flex {
         display: flex;
-    }
-
-    .flex--column {
-        flex-direction: column;
     }
 
     .with-standard-paddings {
@@ -126,6 +123,10 @@
         &__storage,
         &__inspection {
             @extend .flex;
+
+            @media (max-width: 990px) {
+                flex-direction: column;           
+            }
         }
 
         .inspection-comments,
@@ -135,6 +136,10 @@
             box-sizing: border-box;
             width: 50%;
             margin-bottom: 1.375em;
+
+            @media (max-width: 990px) {
+                width: 100%;           
+            }
 
             @extend .with-standard-paddings;
 
