@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SASS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <section class="additional-info">
+        <h2 class="additional-info__header">
+            ADDITIONAL INFO
+        </h2>
+        <div class="additional-info__form additional-info-form">
+            <h3 class="additional-info-form__title">INSPECTION INFORMATION</h3>
+            <div class="additional-info-form__inspection">
+                <div class="inspection-info">
+                    <label class="inspection-info__label">
+                        INSPECTATION LOCATION
+                        <sup title="Required">*</sup>
+                    </label>
+                    <select class="inspection-info__input input--select">
+                        <option value="">Option 1</option>
+                        <option value="">Option 1</option>
+                    </select>
+                    <p class="inspection-info__note">
+                        <small>
+                            Note: Location where vehicle will be stored for transport pickup.
+                        </small>
+                    </p>
+                    <label class="inspection-info__label">
+                        INSPECTION CONTACT PHONE NUMBER
+                        <sup title="Required">*</sup>
+                    </label>
+                    <input type="text" class="inspection-info__input"/>
+                </div>
+                <div class="inspection-comments">
+                    <label class="inspection-comments__label">
+                        INSPECTATION COMMENTS
+                        <sup title="Optional"></sup>
+                    </label>
+                    <textarea type="text" class="inspection-comments__input"></textarea>
+                    <p class="inspection-comments__note">
+                        <small>
+                            Note: The information you provide may be visible to other dealers.
+                        </small> 
+                    </p>
+                </div>
+            </div>
+            <h3 class="additional-info-form__title">STORAGE INFORMATION</h3>
+            <div class="additional-info-form__storage">
+                <div class="storage-info">
+                    <label class="storage-info__label">
+                        STORAGE LOCATION
+                        <sup title="Required">*</sup>
+                    </label>
+                    <select class="storage-info__input input--select">
+                        <option value="">Option 1</option>
+                        <option value="">Option 1</option>
+                    </select>
+                    <p class="storage-info__note">
+                        <small>
+                            Note: Location where vehicle will be stored for transport pickup.
+                        </small>
+                    </p>
+                </div>
+                <div class="storage-comments">
+                    <label class="storage-comments__label">
+                        STORAGE COMMENTS
+                        <sup title="Optional"></sup>
+                    </label>
+                    <textarea type="text" class="storage-comments__input"></textarea>
+                    <p class="storage-comments__note">
+                        <small>
+                            Note: The information you provide may be visible to other dealers.
+                        </small> 
+                    </p>
+                </div>
+            </div>                     
+        </div>
+        <div class="confirm-field">
+            <button class="btn  btn--cancel">Cancel</button>
+            <button class="btn btn--submit">REVIEW & SUBMIT</button>
+        </div>  
+    </section>
+    <script src="/dist/bundle.js"></script>   
+</body>
+</html>
