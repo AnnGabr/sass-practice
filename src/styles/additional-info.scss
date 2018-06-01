@@ -19,10 +19,6 @@
         flex-direction: column;
     }
 
-    .flex--auto {
-        flex: auto;
-    }
-
     .with-standard-paddings {
         padding-right: 15px;
         padding-left: 15px;
@@ -36,10 +32,19 @@
     .input {
         box-sizing: border-box;
 
+        color: #51626f;
         border: 1px solid $accent-2;
 
         @extend .is-block;
         @extend .is-fullwidth;
+    }
+
+    .input--select {
+        background: url(../public/images/arrow.png) right center no-repeat #ffffff;
+
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
     }
 
     .header {

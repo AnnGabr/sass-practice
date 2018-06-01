@@ -1,5 +1,5 @@
 var path = require("path");
-var htmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: "./src/app/app.js",
@@ -21,6 +21,16 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,  
+        use: [{
+            loader: 'url-loader',
+            options: { 
+                limit: 8000, 
+                name: 'images/[hash]-[name].[ext]'
+            } 
+        }]
       }
     ]
   }
